@@ -10491,6 +10491,7 @@ Source: www.kingbright.com</description>
 <wire x1="-20.32" y1="22.86" x2="-15.24" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="-15.24" y1="22.86" x2="-15.24" y2="25.4" width="0.1524" layer="91"/>
+<junction x="-15.24" y="22.86"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -10503,6 +10504,7 @@ Source: www.kingbright.com</description>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="-7.62" y1="33.02" x2="2.54" y2="33.02" width="0.1524" layer="91"/>
 <junction x="-7.62" y="33.02"/>
+<junction x="-15.24" y="33.02"/>
 </segment>
 </net>
 <net name="N$16" class="0">

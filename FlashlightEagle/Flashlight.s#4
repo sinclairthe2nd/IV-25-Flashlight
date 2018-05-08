@@ -5168,8 +5168,8 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="R5" gate="G$1" x="99.06" y="71.12" rot="R180"/>
 <instance part="R6" gate="G$1" x="99.06" y="53.34" rot="R180"/>
 <instance part="X1" gate="-1" x="83.82" y="50.8" rot="R270"/>
-<instance part="X1" gate="-2" x="83.82" y="68.58" rot="R270"/>
-<instance part="X1" gate="-3" x="83.82" y="86.36" rot="R270"/>
+<instance part="X1" gate="-2" x="83.82" y="86.36" rot="R270"/>
+<instance part="X1" gate="-3" x="83.82" y="68.58" rot="R270"/>
 <instance part="U$1" gate="G$1" x="12.7" y="66.04"/>
 <instance part="GND1" gate="1" x="71.12" y="76.2"/>
 <instance part="GND2" gate="1" x="71.12" y="58.42"/>
@@ -5210,6 +5210,26 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <segment>
 <pinref part="T3" gate="G$1" pin="B"/>
 <pinref part="R3" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="T1" gate="G$1" pin="C"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="88.9" x2="83.82" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-2" pin="1"/>
+<wire x1="83.82" y1="88.9" x2="71.12" y2="88.9" width="0.1524" layer="91"/>
+<junction x="83.82" y="88.9"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="T2" gate="G$1" pin="C"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="71.12" x2="83.82" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-3" pin="1"/>
+<wire x1="83.82" y1="71.12" x2="71.12" y2="71.12" width="0.1524" layer="91"/>
+<junction x="83.82" y="71.12"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -5326,24 +5346,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="X3" gate="-1" pin="1"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="X1" gate="-3" pin="1"/>
-<wire x1="93.98" y1="88.9" x2="83.82" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="T1" gate="G$1" pin="C"/>
-<wire x1="83.82" y1="88.9" x2="71.12" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="X1" gate="-2" pin="1"/>
-<wire x1="93.98" y1="71.12" x2="83.82" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="T2" gate="G$1" pin="C"/>
-<wire x1="83.82" y1="71.12" x2="71.12" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

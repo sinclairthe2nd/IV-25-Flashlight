@@ -10208,7 +10208,7 @@ Source: www.kingbright.com</description>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0411/12" package3d_urn="urn:adsk.eagle:package:26091/1"/>
 <part name="U$2" library="mcp73831" deviceset="MCP73831" device=""/>
-<part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:26062/1"/>
+<part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:25945/1"/>
 <part name="R9" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R1206" package3d_urn="urn:adsk.eagle:package:26062/1"/>
 <part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:26160/1"/>
 <part name="C2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="050-025X075" package3d_urn="urn:adsk.eagle:package:26160/1"/>
@@ -10221,6 +10221,7 @@ Source: www.kingbright.com</description>
 <part name="X4" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1" value="Switch"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2"/>
 <part name="X6" library="con-phoenix-254" library_urn="urn:adsk.eagle:library:172" deviceset="MPT2" device="" package3d_urn="urn:adsk.eagle:package:9320/1" value="Battery"/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10276,6 +10277,7 @@ Source: www.kingbright.com</description>
 <instance part="LED1" gate="G$1" x="-7.62" y="17.78" rot="R180"/>
 <instance part="X6" gate="-1" x="40.64" y="40.64"/>
 <instance part="X6" gate="-2" x="40.64" y="20.32"/>
+<instance part="GND10" gate="1" x="-15.24" y="20.32"/>
 </instances>
 <busses>
 </busses>
@@ -10383,6 +10385,14 @@ Source: www.kingbright.com</description>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="X5" gate="-1" pin="1"/>
+<wire x1="-20.32" y1="22.86" x2="-15.24" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="-15.24" y1="22.86" x2="-15.24" y2="25.4" width="0.1524" layer="91"/>
+<junction x="-15.24" y="22.86"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="N$13" class="0">
 <segment>
@@ -10483,15 +10493,6 @@ Source: www.kingbright.com</description>
 <wire x1="-66.04" y1="45.72" x2="-66.04" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="X4" gate="-2" pin="1"/>
 <pinref part="X6" gate="-1" pin="1"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="X5" gate="-1" pin="1"/>
-<wire x1="-20.32" y1="22.86" x2="-15.24" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="-15.24" y1="22.86" x2="-15.24" y2="25.4" width="0.1524" layer="91"/>
-<junction x="-15.24" y="22.86"/>
 </segment>
 </net>
 <net name="N$19" class="0">
