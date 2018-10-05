@@ -71,48 +71,44 @@ DDRB = 0b00001111; //Set Data Direction Register so PB 0,1,2,3 are outputs while
  }
 
  
-    if (voltage_fl > 3.9) // Close to Full at 1C load; Topmost Segment
-    {
-      
+    if (voltage_fl > 3.7) // Close to Full at 1C load; Topmost Segment
+    {      
 			PORTB &= ~(1 << PB1); // PB1 goes low 
-
-    } else {
-     
-			PORTB |= (1 << PB1); // PB1 goes high  
-
-    }
-     if (voltage_fl > 3.7) // Middle Segment
+    } 
+    else 
     {
-       
-			PORTB &= ~(1 << PB2); // PB2 goes low
-
+    		PORTB |= (1 << PB1); // PB1 goes high  
     }
+
+     if (voltage_fl > 3.5) // Middle Segment
+    {      
+			PORTB &= ~(1 << PB2); // PB2 goes low
+    }
+    else 
+    {
+			PORTB |= (1 << PB2); // PB2 goes high 
+    } 
+     
+    if (voltage_fl > 3.3) // Bottomost Segment
+    { 
+			PORTB |= (1 << PB3); // PB3 goes high
+    }
+    else
+    {		
+		PORTB &= ~(1 << PB3); // PB3 goes low
+    }
+        
+    if (voltage_fl < 3.0) // Blink
+    {
+		PORTB &= ~(1 << PB3); // PB3 goes low
+		_delay_ms(50);
+		PORTB |= (1 << PB3); // PB3 goes high
+		_delay_ms(50);
+     }
      else 
      {
-			PORTB |= (1 << PB2); // PB2 goes high 
-     }
-     
-     
-     if (voltage_fl > 3.5) // Bottomost Segment
-     { 
-			PORTB |= (1 << PB3); // PB3 goes high
-     }
-     else
-     {		
-			PORTB &= ~(1 << PB3); // PB3 goes low
-     }
-          
-     if (voltage_fl < 3.3) // Blink
-     {
-			PORTB &= ~(1 << PB3); // PB3 goes low
-			_delay_ms(50);
-			PORTB |= (1 << PB3); // PB3 goes high
-			_delay_ms(50);
-      }
-      else 
-      {
-			PORTB &= ~(1 << PB3); // PB3 goes low
-	  }
+		PORTB &= ~(1 << PB3); // PB3 goes low
+	 }
      
     //Fin
    
